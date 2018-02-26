@@ -11,7 +11,7 @@ spring:
         enabled: true
       server:
         git:
-          uri: https://github.com/kbastani/spring-boot-microservice-config
+          uri: http://localhost:10080/xcl/spmsconfig
         health:
           repositories:
             movie:
@@ -29,13 +29,13 @@ endpoints:
     sensitive: false
 eureka:
   instance:
-    hostname: config-99.cfapps.io
+    hostname: localhost
     nonSecurePort: 80
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://discovery-kb.cfapps.io/eureka/
+      defaultZone: http://localhost/eureka/
 
 ---
 
@@ -45,7 +45,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kbastani/spring-boot-microservice-config
+          uri: http://localhost/eureka/
         health:
           repositories:
             movie:
@@ -78,7 +78,7 @@ spring:
         enabled: true
       server:
         git:
-          uri: https://github.com/kbastani/spring-boot-microservice-config
+          uri: http://localhost:10080/xcl/spmsconfig
         health:
           repositories:
             movie:
@@ -102,4 +102,4 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://discovery.54.149.244.237.xip.io/eureka/
+      defaultZone: http://localhost/eureka/
